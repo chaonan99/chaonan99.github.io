@@ -9,9 +9,9 @@ baseurl: null # apply null if repo name is something like username.github.io
 
 google_analytics: UA-XXXXX-XX
 repo: http://github.com/chaonan99/
-# disqus_shortname: "heiswayi"
+disqus_shortname: "chaonan99"
 # twitter_username: "HeiswayiNrird"
-# comments: true
+comments: true
 
 # Build settings
 permalink   : /:year/:title/
@@ -29,7 +29,7 @@ sass:
 # Author settings
 author:
   name     : "Haonan Chen"
-  job      : "Tsinghua University, student"
+  job      : "student in Tsinghua University"
 #  bio      : "1+1=3 is always TRUE in my world, a balance between binary and reality."
   thumb    : /images/author.jpg
   email    : chenhaonan1995@gmail.com
