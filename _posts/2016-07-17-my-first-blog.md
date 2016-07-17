@@ -19,6 +19,8 @@ keywords: "markdown, typography blog, dummy content"
 * Markdown贴图片稍微麻烦点，但[这里](https://github.com/chaonan99/markdown-image-copy-windows)提供了一个解决方案（顺便给自己打广告hhh）。
 * 很多网站的Markdown不支持数学公式。然而既然有了自己的主页，[这个](http://cyukang.com/2013/03/03/try-mathjax.html)就可以自己添加啦。
 
+<div>
 $$\sin^2(x) + \cos^2(x) = 1$$
+</div>
 
 * Markdown难以转化为其他格式，尤其是PDF。这对于有写作业需求的我还是比较重要的。目前我用的解决方案是用[Rmarkdown](http://rmarkdown.rstudio.com/authoring_quick_tour.html)提供的工具。当然这个机制肯定是不依赖于R语言的，只是我懒得把它拆解出来能用就好 = =。。。
