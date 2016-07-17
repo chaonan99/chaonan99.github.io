@@ -4,4 +4,4 @@ title: About
 permalink: /about/
 ---
 
-This is an easy personal blog. The blog is based on [Jekyll](https://jekyllrb.com/). This theme is provided by [**thinkspace**](https://github.com/heiswayi/thinkspace).
+I'm currently a student in Tsinghua University, major in automation (EECS). I'm really interested in topics on computer vision and machine learning.
