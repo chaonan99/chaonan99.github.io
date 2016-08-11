@@ -41,11 +41,11 @@ $$e_{i}^{(t)} = w^T\tanh(W_ah^{(t-1)}+U_av_i+b_a)$$
 In which $$w,W_a,U_a,b_a$$ are all learnable parameters. Here we assume $$r$$ to be the size of an RNN hidden state, $$m$$ to be the encoding size of CNN, $$a$$ to be the attention matrix size (you can play with this parameter), we can list the size of those variables as follows (I always find it useful to list the size of those variables!)
 
 $$
-v_i\in \R^{m} \\
-h^{(t)}\in \R^{r}\\
-W_a\in \R^{a\times r}\\
-U_a\in \R^{a\times m}\\
-b_a, w \in \R^{a}
+v_i\in \mathbb{R}^{m} \\
+h^{(t)}\in \mathbb{R}^{r}\\
+W_a\in \mathbb{R}^{a\times r}\\
+U_a\in \mathbb{R}^{a\times m}\\
+b_a, w \in \mathbb{R}^{a}
 $$
 
 So this gives $$e_i^{(t)}$$ as a scalar value.
