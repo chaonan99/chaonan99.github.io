@@ -37,7 +37,9 @@ $$\phi^{(t)}=\sum_{i=1}^N\alpha_{i}^{(t)}v_i$$
 
 ## Some details
 So how we define $$f(v_i,h_j)$$? That's much the similar of what we do in a node of neural network. Just a linear function over $$v_i$$ and $$h_j$$ and add a non-linear active function. Here we use $$tanh$$ as the active function.
+
 $$e_{i}^{(t)} = w^T\tanh(W_ah^{(t-1)}+U_av_i+b_a)$$
+
 In which $$w,W_a,U_a,b_a$$ are all learnable parameters. Here we assume $$r$$ to be the size of an RNN hidden state, $$m$$ to be the encoding size of CNN, $$a$$ to be the attention matrix size (you can play with this parameter), we can list the size of those variables as follows (I always find it useful to list the size of those variables!)
 
 $$
