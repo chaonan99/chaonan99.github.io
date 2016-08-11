@@ -1,3 +1,10 @@
+---
+layout: post
+title: "Easy Explanation to Temporal Attention"
+comments: true
+description: "This blog intends to explain the intuition of temporal attention mechanism and how to implement it."
+keywords: "temporal, attention mechanism, implement, torch"
+---
 
 > This blog intends to explain the intuition of temporal attention mechanism and how to implement it.
 
@@ -15,18 +22,24 @@ Obviously, this approach doesn't consider the temporal order of those frames, an
 
 # Temporal attention
 So how do we choose those weights? We can calculation the weights automatically! Let's check the structure above. When you want to calculate the weight for a single CNN output, what should be the input factors? We know that the feature itself holds the information about that frame, and the hidden states holds the information of a RNN. As LSTM has a memory over time steps, the information will be gathered into the latest hidden state (_i.e._ the hidden state of previous time step). Thus, it comes naturally to define the weight as a function of a feature and previous hidden state.
-$$e_{i}^{(t)} = f(v_i, h^{(t-1)})$$
-In this equation, $v_i$ represents a feature vector, and $h_{t-1}$ is the previous hidden state of which unit the weighted feature is going to input to. And assume $N$ is the number of frames and $T$ is the total number of time steps in RNN, we will have $i\in [1,N]$ and $j\in [1,T]$
 
- But this doesn't make sure those $e_{ij}$ will have a sum to 1 over all features. So we apply softmax over them as follows.
+$$e_{i}^{(t)} = f(v_i, h^{(t-1)})$$
+
+In this equation, $$v_i$$ represents a feature vector, and $$h_{t-1}$$ is the previous hidden state of which unit the weighted feature is going to input to. And assume $$N$$ is the number of frames and $$T$$ is the total number of time steps in RNN, we will have $$i\in [1,N]$$ and $$j\in [1,T]$$
+
+But this doesn't make sure those $$e_{ij}$$ will have a sum to 1 over all features. So we apply softmax over them as follows.
+
 $$\alpha_{i}^{(t)} = \frac{exp\{e_{i}^{(t)}\}}{\sum_{i=1}^Nexp\{e_{i}^{(t)}\}}$$
-This will give you $\sum_{i=1}^N\alpha_{ij}=1$, so we can calculate a single feature for each time step as
+
+This will give you $$\sum_{i=1}^N\alpha_{ij}=1$$, so we can calculate a single feature for each time step as
+
 $$\phi^{(t)}=\sum_{i=1}^N\alpha_{i}^{(t)}v_i$$
 
 ## Some details
-So how we define $f(v_i,h_j)$? That's much the similar of what we do in a node of neural network. Just a linear function over $v_i$ and $h_j$ and add a non-linear active function. Here we use $tanh$ as the active function.
+So how we define $$f(v_i,h_j)$$? That's much the similar of what we do in a node of neural network. Just a linear function over $$v_i$$ and $$h_j$$ and add a non-linear active function. Here we use $$tanh$$ as the active function.
 $$e_{i}^{(t)} = w^T\tanh(W_ah^{(t-1)}+U_av_i+b_a)$$
-In which $w,W_a,U_a,b_a$ are all learnable parameters. Here we assume $r$ to be the size of an RNN hidden state, $m$ to be the encoding size of CNN, $a$ to be the attention matrix size (you can play with this parameter), we can list the size of those variables as follows (I always find it useful to list the size of those variables!)
+In which $$w,W_a,U_a,b_a$$ are all learnable parameters. Here we assume $$r$$ to be the size of an RNN hidden state, $$m$$ to be the encoding size of CNN, $$a$$ to be the attention matrix size (you can play with this parameter), we can list the size of those variables as follows (I always find it useful to list the size of those variables!)
+
 $$
 v_i\in \R^{m} \\
 h^{(t)}\in \R^{r}\\
@@ -34,11 +47,12 @@ W_a\in \R^{a\times r}\\
 U_a\in \R^{a\times m}\\
 b_a, w \in \R^{a}
 $$
-So this gives $e_i^{(t)}$ as a scalar value.
+
+So this gives $$e_i^{(t)}$$ as a scalar value.
 
 Another detail is that we share those learnable parameters for different time steps, just like what RNN does. It can be implemented into the RNN unit so that the unit like LSTM can take a sequence as input. And as the equations are all differential, we can learn those parameters using back propagation with any optimization method!
 
-This mechanism can definitely used in other problems as long as you can transform the problem to a sequence representation. Theoretically, it will perform better than input a single item of a sequence because that can be described as a one-hot weight (_i.e._ weight over the sequence with a vector that only a single position takes 1 and others are all 0). However, if the attention matrix size $a$ is too small, intuitively, it won't cover all the possible weights to minimize the cost function, so the choice of $a$ is important. But I haven't found a best practice on how to choose that. Currently I just set it the same as $r$ (the size of RNN hidden state). Tell me if you have some experience!
+This mechanism can definitely used in other problems as long as you can transform the problem to a sequence representation. Theoretically, it will perform better than input a single item of a sequence because that can be described as a one-hot weight (_i.e._ weight over the sequence with a vector that only a single position takes 1 and others are all 0). However, if the attention matrix size $$a$$ is too small, intuitively, it won't cover all the possible weights to minimize the cost function, so the choice of $$a$$ is important. But I haven't found a best practice on how to choose that. Currently I just set it the same as $$r$$ (the size of RNN hidden state). Tell me if you have some experience!
 
 # Torch implementation of attention
 [Here](https://gist.github.com/chaonan99/766341e72c63763e028eab9428587f24) is a easy implementation of this temporal attention mechanism in [torch](https://github.com/torch). Also shown as follows:
@@ -82,6 +96,6 @@ local in_prev_h = torch.rand(seq_per_video, rnn_size)
 print(m:forward({in_feat, in_prev_h}))
 ```
 
-Notice that here is also a `seq_per_video` parameter, in which case there are multiple ground truth sentences for one video clip. This cause the hidden state to be the size of `seq_per_video * rnn_size`, so we need to replicate $U_av_i$ to match the size of $W_ah^{(t-1)}$.
+Notice that here is also a `seq_per_video` parameter, in which case there are multiple ground truth sentences for one video clip. This cause the hidden state to be the size of `seq_per_video * rnn_size`, so we need to replicate $$U_av_i$$ to match the size of $$W_ah^{(t-1)}$$.
 
 I'm doing experiment on some models using attention mechanism. I may update my blog to make some comparison with different models in the coming post (as long as I cure my procrastination :-).
