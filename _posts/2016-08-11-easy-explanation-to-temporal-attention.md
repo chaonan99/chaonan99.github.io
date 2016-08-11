@@ -56,7 +56,8 @@ This mechanism can definitely used in other problems as long as you can transfor
 
 # Torch implementation of attention
 [Here](https://gist.github.com/chaonan99/766341e72c63763e028eab9428587f24) is a easy implementation of this temporal attention mechanism in [torch](https://github.com/torch). Also shown as follows:
-```
+
+{% highlight ruby %}
 require 'nn'
 require 'nngraph'
 
@@ -94,8 +95,8 @@ m = nn.gModule({feats,prev_h},{jo})
 local in_feat = torch.rand(frame_per_video, input_size)
 local in_prev_h = torch.rand(seq_per_video, rnn_size)
 print(m:forward({in_feat, in_prev_h}))
-```
 
+{% endhighlight %}
 Notice that here is also a `seq_per_video` parameter, in which case there are multiple ground truth sentences for one video clip. This cause the hidden state to be the size of `seq_per_video * rnn_size`, so we need to replicate $$U_av_i$$ to match the size of $$W_ah^{(t-1)}$$.
 
 I'm doing experiment on some models using attention mechanism. I may update my blog to make some comparison with different models in the coming post (as long as I cure my procrastination :-).
