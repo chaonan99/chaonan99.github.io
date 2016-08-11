@@ -57,7 +57,7 @@ This mechanism can definitely used in other problems as long as you can transfor
 # Torch implementation of attention
 [Here](https://gist.github.com/chaonan99/766341e72c63763e028eab9428587f24) is a easy implementation of this temporal attention mechanism in [torch](https://github.com/torch). Also shown as follows:
 
-{% highlight ruby %}
+{% highlight Lua %}
 require 'nn'
 require 'nngraph'
 
