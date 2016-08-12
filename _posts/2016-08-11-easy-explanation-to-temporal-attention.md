@@ -27,7 +27,7 @@ So how do we choose those weights? We can calculate the weights automatically! L
 
 $$e_{i}^{(t)} = f(v_i, h^{(t-1)})$$
 
-In this equation, $$v_i$$ represents a feature vector, and $$h_{t-1}$$ is the previous hidden state of which unit the weighted feature is going to input to. And assume $$N$$ is the number of frames and $$T$$ is the total number of time steps in RNN, we will have $$i\in [1,N]$$ and $$t\in [1,T]$$
+In this equation, $$v_i$$ represents a feature vector, and $$h_{t-1}$$ is the previous hidden state of which unit the weighted feature is going to input to. And assume $$N$$ is the number of frames and $$T$$ is the total number of time steps in RNN, we will have $$i\in [1,N]$$ and $$t\in [1,T]$$. (We can define $$h^{(0)}$$ as $$\mathbf{0}$$ vector so $$t=1$$ makes sense)
 
 But this doesn't make sure those $$e_{i}^{(t)}$$ will have a sum to 1 over all features. So we apply softmax over them as follows.
 
