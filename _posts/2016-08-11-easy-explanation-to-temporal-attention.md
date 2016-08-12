@@ -6,7 +6,7 @@ description: "This blog intends to explain the intuition of temporal attention m
 keywords: "temporal, attention mechanism, implement, torch"
 ---
 
-> This blog intends to explain the intuition of temporal attention mechanism and how to implement it.
+> This blog intends to explain the intuition of temporal attention mechanism and how to implement it. I would really thank *Ryan Szeto* for his careful review of this post.
 
 Attention mechanism is a popular topic in deep learning these years. The original intuition is loosely related to human attention, as we tend to focus on a certain region of the scene we are seeing. Attention is successfully used in [machine translation](https://arxiv.org/pdf/1409.0473v7.pdf), [image captioning](http://arxiv.org/pdf/1502.03044v3.pdf), and [video captioning](http://arxiv.org/pdf/1502.08029v5.pdf) tasks (these are the very first work using attention in their tasks). As I'm working on image/video captioning these days, I'll explain how to apply attention on this specific topic. To begin with, let's go through the approach of image caption generation.
 
@@ -25,18 +25,18 @@ So how do we choose those weights? We can calculation the weights automatically!
 
 $$e_{i}^{(t)} = f(v_i, h^{(t-1)})$$
 
-In this equation, $$v_i$$ represents a feature vector, and $$h_{t-1}$$ is the previous hidden state of which unit the weighted feature is going to input to. And assume $$N$$ is the number of frames and $$T$$ is the total number of time steps in RNN, we will have $$i\in [1,N]$$ and $$j\in [1,T]$$
+In this equation, $$v_i$$ represents a feature vector, and $$h_{t-1}$$ is the previous hidden state of which unit the weighted feature is going to input to. And assume $$N$$ is the number of frames and $$T$$ is the total number of time steps in RNN, we will have $$i\in [1,N]$$ and $$t\in [1,T]$$
 
-But this doesn't make sure those $$e_{ij}$$ will have a sum to 1 over all features. So we apply softmax over them as follows.
+But this doesn't make sure those $$e_{i}^{(t)}$$ will have a sum to 1 over all features. So we apply softmax over them as follows.
 
 $$\alpha_{i}^{(t)} = \frac{exp\{e_{i}^{(t)}\}}{\sum_{i=1}^Nexp\{e_{i}^{(t)}\}}$$
 
-This will give you $$\sum_{i=1}^N\alpha_{ij}=1$$, so we can calculate a single feature for each time step as
+This will give you $$\sum_{i=1}^N\alpha_{i}^{(t)}=1$$, so we can calculate a single feature for each time step as
 
 $$\phi^{(t)}=\sum_{i=1}^N\alpha_{i}^{(t)}v_i$$
 
 ## Some details
-So how we define $$f(v_i,h_j)$$? That's much the similar of what we do in a node of neural network. Just a linear function over $$v_i$$ and $$h_j$$ and add a non-linear active function. Here we use $$tanh$$ as the active function.
+So how we define $$f(v_i,h^{(t)})$$? That's much the similar of what we do in a node of neural network. Just a linear function over $$v_i$$ and $$h^{(t)}$$ and add a non-linear active function. Here we use $$tanh$$ as the active function.
 
 $$e_{i}^{(t)} = w^T\tanh(W_ah^{(t-1)}+U_av_i+b_a)$$
 
