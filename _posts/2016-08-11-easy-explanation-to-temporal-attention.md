@@ -14,7 +14,7 @@ Attention mechanism is a popular topic in deep learning these years. The origina
 The deep learning approach on this task has shown great progresses beyond traditional template approach (like [this](http://www.cs.utexas.edu/~ml/papers/thomason.coling14.pdf) paper, a pretty recent work). In most circumstances, it use a CNN to encode an image to a vector as the representation, and use machine translation pipe line to *translate* image feature into target language. That's the typical [encoder-decoder framework](https://arxiv.org/pdf/1406.1078v3.pdf).
 
 # From image to video
-When it goes to video captioning, you'll get a set of feature vectors for every frame. So how do we combine them together? The easiest way is to calculate the mean of all vectors, thus get a single vector representation just like the image caption task. So the remaining architecture is the same. That's exactly the work of [Translating Videos to Natural Language Using Deep Recurrent Neural Networks](https://arxiv.org/pdf/1412.4729v3.pdf). Here is a picture of their model.
+When it goes to video captioning, you'll get a set of feature vectors over all frames. So how do we combine them together? The easiest way is to calculate the mean of all vectors, thus get a single vector representation just like the image caption task. So the remaining architecture is the same. That's exactly the work of [Translating Videos to Natural Language Using Deep Recurrent Neural Networks](https://arxiv.org/pdf/1412.4729v3.pdf). Here is a picture of their model.
 
 ![2016_08_11_93a0c6c07a264f9f89e1fd1bc376861](http://oa5omjl18.bkt.clouddn.com/2016_08_11_93a0c6c07a264f9f89e1fd1bc376861.png "Structure of video captioning system using mean pooling")
 
