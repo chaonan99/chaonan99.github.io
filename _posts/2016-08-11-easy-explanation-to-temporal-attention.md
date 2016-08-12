@@ -6,7 +6,7 @@ description: "This blog intends to explain the intuition of temporal attention m
 keywords: "temporal, attention mechanism, implement, torch"
 ---
 
-> This blog intends to explain the intuition of temporal attention mechanism and how to implement it. I would really thank *Ryan Szeto* for his careful review of this post.
+> This blog intends to explain the intuition of temporal attention mechanism and how to implement it. I would really thank *Ryan Szeto* and *Daiqi Gao* for their careful review of this post.
 
 Attention mechanism is a popular topic in deep learning these years. The original intuition is loosely related to human attention, as we tend to focus on a certain region of the scene we are seeing. Attention is successfully used in [machine translation](https://arxiv.org/pdf/1409.0473v7.pdf), [image captioning](http://arxiv.org/pdf/1502.03044v3.pdf), and [video captioning](http://arxiv.org/pdf/1502.08029v5.pdf) tasks (these are the very first work using attention in their tasks). As I'm working on image/video captioning these days, I'll explain how to apply attention on this specific topic. To begin with, let's go through the approach of image caption generation.
 
@@ -14,14 +14,16 @@ Attention mechanism is a popular topic in deep learning these years. The origina
 The deep learning approach on this task has shown great progresses beyond traditional template approach (like [this](http://www.cs.utexas.edu/~ml/papers/thomason.coling14.pdf) paper, a pretty recent work). In most circumstances, it use a CNN to encode an image to a vector as the representation, and use machine translation pipe line to *translate* image feature into target language. That's the typical [encoder-decoder framework](https://arxiv.org/pdf/1406.1078v3.pdf).
 
 # From image to video
-When it goes to video captioning, you'll get a set of feature vectors over all frames. So how do we combine them together? The easiest way is to calculate the mean of all vectors, thus get a single vector representation just like the image caption task. So the remaining architecture is the same. That's exactly the work of [Translating Videos to Natural Language Using Deep Recurrent Neural Networks](https://arxiv.org/pdf/1412.4729v3.pdf). Here is a picture of their model.
+When it goes to video captioning, you'll get a set of feature vectors over all frames. So how do we combine them together? The easiest way is to calculate the mean value of all vectors, thus get a single vector representation just like the image caption task. So the remaining architecture is the same. That's exactly the work of [Translating Videos to Natural Language Using Deep Recurrent Neural Networks](https://arxiv.org/pdf/1412.4729v3.pdf). Here is a picture of their model.
 
 ![2016_08_11_93a0c6c07a264f9f89e1fd1bc376861](http://oa5omjl18.bkt.clouddn.com/2016_08_11_93a0c6c07a264f9f89e1fd1bc376861.png "Structure of video captioning system using mean pooling")
 
-Obviously, this approach doesn't consider the temporal order of those frames, and give the same input to the decoder in every time step. We can easily improve this model by replacing the mean average of features with a weighted average. That's exactly temporal attention mechanism used in [Describing Videos by Exploiting Temporal Structure](http://arxiv.org/pdf/1502.08029v5.pdf).
+Obviously, this approach fails to consider the temporal order of frames, and gives the same input to the decoder in every time step (as shown in the figure above). We can easily improve this model by replacing the mean average with weighted average. That's exactly the method in [Describing Videos by Exploiting Temporal Structure](http://arxiv.org/pdf/1502.08029v5.pdf). Here is the picture of their model.
+
+![2016_08_11_76334843cd90cd7af03e2483df49e78](http://oa5omjl18.bkt.clouddn.com/2016_08_11_76334843cd90cd7af03e2483df49e78.png "Structure of video captioning system using temporal attention")
 
 # Temporal attention
-So how do we choose those weights? We can calculation the weights automatically! Let's check the structure above. When you want to calculate the weight for a single CNN output, what should be the input factors? We know that the feature itself holds the information about that frame, and the hidden states holds the information of a RNN. As LSTM has a memory over time steps, the information will be gathered into the latest hidden state (_i.e._ the hidden state of previous time step). Thus, it comes naturally to define the weight as a function of a feature and previous hidden state.
+So how do we choose those weights? We can calculate the weights automatically! Let's check the structure above. When you want to calculate the weight for a single CNN output, what should be the input factors? We know that the feature itself holds the information about that frame, and the hidden states holds the information of a RNN. As LSTM has a memory over time steps, the information will be gathered into the latest hidden state (_i.e._ the hidden state of previous time step). Thus, it comes naturally to define the weight as a function of a feature and previous hidden state.
 
 $$e_{i}^{(t)} = f(v_i, h^{(t-1)})$$
 
