@@ -29,7 +29,7 @@ $$e_{i}^{(t)} = f(v_i, h^{(t-1)})$$
 
 In this equation, $$v_i$$ represents a feature vector, and $$h_{t-1}$$ is the previous hidden state of which unit the weighted feature is going to input to. And assume $$N$$ is the number of frames and $$T$$ is the total number of time steps in RNN, we will have $$i\in [1,N]$$ and $$t\in [1,T]$$. (We can define $$h^{(0)}$$ as $$\mathbf{0}$$ vector so $$t=1$$ makes sense)
 
-But this doesn't make sure $$e_{i}^{(t)}$$ will have a sum to 1 over all features (_i.e._ $$\sum_{i=1}^Ne_i^{(t)}\neq 1$$). So we apply softmax over them as follows.
+But this doesn't make sure $$e_{i}^{(t)}$$ will have a sum to 1 over all features (_i.e._ $$\sum_{i=1}^Ne_i^{(t)}\neq 1$$, remember we are doing weighted average!). So we apply softmax over them as follows.
 
 $$\alpha_{i}^{(t)} = \frac{exp\{e_{i}^{(t)}\}}{\sum_{i=1}^Nexp\{e_{i}^{(t)}\}}$$
 
