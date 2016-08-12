@@ -38,7 +38,7 @@ This will give you $$\sum_{i=1}^N\alpha_{i}^{(t)}=1$$, so we can calculate a sin
 $$\phi^{(t)}=\sum_{i=1}^N\alpha_{i}^{(t)}v_i$$
 
 ## Some details
-So how we define $$f(v_i,h^{(t)})$$? That's much the similar of what we do in a node of neural network. Just a linear function over $$v_i$$ and $$h^{(t)}$$ and add a non-linear active function. Here we use $$\tanh$$ as the active function.
+So how we define $$f(v_i,h^{(t)})$$? That's much the similar of what we do in a node of neural network. (if you know nothing about neural network and machine learning, I would highly recommand [this tutorial](http://ufldl.stanford.edu/tutorial/supervised/LinearRegression/) and [Andrew Ng's machine learning course](https://www.coursera.org/learn/machine-learning) which takes week long study but really a worth of time) Just a linear function over $$v_i$$ and $$h^{(t)}$$ and add a non-linear active function. Here we use $$\tanh$$ as the active function.
 
 $$e_{i}^{(t)} = w^T\tanh(W_ah^{(t-1)}+U_av_i+b_a)$$
 
