@@ -18,7 +18,7 @@ When it goes to video captioning, you'll get a set of feature vectors over all f
 
 ![2016_08_11_93a0c6c07a264f9f89e1fd1bc376861](http://oa5omjl18.bkt.clouddn.com/2016_08_11_93a0c6c07a264f9f89e1fd1bc376861.png "Structure of video captioning system using mean pooling")
 
-Obviously, this approach fails to consider the temporal order of frames, and gives the same input to the decoder in every time step (as shown in the figure above). We can easily improve this model by replacing the mean average with weighted average. That's exactly the method in [Describing Videos by Exploiting Temporal Structure](http://arxiv.org/pdf/1502.08029v5.pdf). Here is the picture of their model.
+Obviously, this approach fails to consider the temporal order of frames, and gives the same input to the decoder in every time step (as shown in the figure above). We can easily improve this model by replacing the arithmatic mean with weighted average. That's exactly the method in [Describing Videos by Exploiting Temporal Structure](http://arxiv.org/pdf/1502.08029v5.pdf). Here is the picture of their model.
 
 ![2016_08_11_76334843cd90cd7af03e2483df49e78](http://oa5omjl18.bkt.clouddn.com/2016_08_11_76334843cd90cd7af03e2483df49e78.png "Structure of video captioning system using temporal attention")
 
