@@ -6,7 +6,7 @@ description: "This blog intends to explain the intuition of temporal attention m
 keywords: "temporal, attention, mechanism, implement, torch, tutorial"
 ---
 
-> This blog intends to explain the intuition of temporal attention mechanism and how to implement it. I would really thank *Ryan Szeto* and *Daiqi Gao* for their careful review of this post.
+> This blog intends to explain the intuition of temporal attention mechanism and how to implement it.
 
 Attention mechanism is a popular topic in deep learning these years. It is loosely based on human visual attention mechanism, as we tend to focus on a certain region with “high resolution” while perceiving the surrounding image in “low resolution”, and then adjust the focal point over time. (Quote from [here](http://www.wildml.com/2016/01/attention-and-memory-in-deep-learning-and-nlp/). It's a great post on the similar topic of this post, which is much like a paper review.)  Attention is successfully used in [machine translation](https://arxiv.org/pdf/1409.0473v7.pdf), [image captioning](http://arxiv.org/pdf/1502.03044v3.pdf), and [video captioning](http://arxiv.org/pdf/1502.08029v5.pdf) tasks (these are the very first work using attention in their tasks). As I'm working on image/video captioning these days, I'll explain how to apply attention to this specific topic. To begin with, let's go through the approach of image caption generation.
 
@@ -104,3 +104,12 @@ print(m:forward({in_feat, in_prev_h}))
 Notice that here is also a `seq_per_video` parameter, in which case there are multiple ground truth sentences for one video clip. This cause the hidden state to be the size of `seq_per_video * rnn_size`, so we need to replicate $$U_av_i$$ to match the size of $$W_ah^{(t-1)}$$.
 
 I'm doing experiment on some models using attention mechanism. I may update my blog to make some comparison with different models in the coming post (as long as I cure my procrastination :-).
+
+# Resource
+
+* [Attention Mechanism (blog post)](https://blog.heuritech.com/2016/01/20/attention-mechanism/).
+* [Attention and Memory in Deep Learning and NLP (blog post)](http://www.wildml.com/2016/01/attention-and-memory-in-deep-learning-and-nlp/)
+* [Describing Multimedia Content using Attention-based Encoder–Decoder Networks (paper)](https://arxiv.org/pdf/1507.01053.pdf)
+
+# Acknowledge
+The author would thank *Ryan Szeto* and *Daiqi Gao* for their careful review of this post.
