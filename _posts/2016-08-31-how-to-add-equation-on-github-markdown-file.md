@@ -23,7 +23,9 @@ Sometimes we may need to write some equation in README file. This will be easy a
 # Reason
 
 * Why we need picture rather than direct latex?
+
 GitHub markdown parsing is performed by the SunDown (ex libUpSkirt) library. For security, it won't allow javascript to be executed when rendering markdown to HTML. Thus won't provide equation feature.
 
 * Why encoding url?
+
 First of all, GitHub uses an open-source project called Camo to provide a proxy for images hosted on GitHub. You will see that once your file is uploaded, the [url of the image will change](https://help.github.com/articles/why-do-my-images-have-strange-urls/) to something like `https://camo.githubusercontent.com/672ecfd312696079a......`. But this mechanism only support encoded url and does not seem to support http redirect (which some service may fail to provide image, like [iText2Img](http://www.sciweavers.org/free-online-latex-equation-editor)).
