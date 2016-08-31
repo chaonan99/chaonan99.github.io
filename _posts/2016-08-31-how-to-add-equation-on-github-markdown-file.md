@@ -40,13 +40,7 @@ Here I wrote an easy sublime plug-in [here](https://github.com/chaonan99/Latex2P
 import sublime, sublime_plugin, urllib
 
 def selections(view, default_to_all=True):
-    """
-    Return all non-empty selections in view
-    If None, return entire view if default_to_all is True
-    code from: https://github.com/mastahyeti/URLEncode
-    """
     regions = [r for r in view.sel() if not r.empty()]
-
     if not regions and default_to_all:
         regions = [sublime.Region(0, view.size())]
 
