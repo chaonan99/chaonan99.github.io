@@ -3,7 +3,7 @@ layout: post
 title: "How to Add Equation on Github Markdown File"
 comments: true
 description: "This blog post tells you how to show latex equation on GitHub (not GitHub page, but .md file like README)."
-keywords: "GitHub, markdown, latex, camo"
+keywords: "GitHub, markdown, latex, camo, sublime, plug-in"
 ---
 
 > This blog post tells you how to show latex equation on GitHub (not GitHub Page, but .md file like README).
@@ -29,3 +29,40 @@ GitHub markdown parsing is performed by the [SunDown](https://github.com/vmg/sun
 * Why encoding url?
 
 First of all, GitHub uses an open-source project called Camo to provide a proxy for images hosted on GitHub. You will see that once your file is uploaded, the [url of the image will change](https://help.github.com/articles/why-do-my-images-have-strange-urls/) to something like `https://camo.githubusercontent.com/672ecfd312696079a......`. But this mechanism only support encoded url and does not seem to support http redirect (which some service may fail to provide image, like [iText2Img](http://www.sciweavers.org/free-online-latex-equation-editor)).
+
+# Sublime plug-in for this
+There is no way for a programmer to do these foolish steps by hand! We always try to solve these easy problem by raising a much more difficult problem... Anyway, here comes the sublime plug-in to do this job for us (I'm a heavy sublime user). If you know nothing about how to write a sublime plug-in, [here](https://clarknikdelpowell.com/blog/creating-sublime-text-3-plugins-part-1/) is a good start. Yet to implement a practicable plug-in is really difficult.
+
+Here I wrote an easy sublime plug-in [here](https://github.com/chaonan99/Latex2Picture). It can do those steps above for you automatically just after pressing a hot key.
+
+```Python
+import sublime, sublime_plugin, urllib
+
+def selections(view, default_to_all=True):
+    """
+    Return all non-empty selections in view
+    If None, return entire view if default_to_all is True
+    code from: https://github.com/mastahyeti/URLEncode
+    """
+    regions = [r for r in view.sel() if not r.empty()]
+
+    if not regions and default_to_all:
+        regions = [sublime.Region(0, view.size())]
+
+    return regions
+
+def quote(view, s):
+    return "![equation](http://latex.codecogs.com/svg.latex?" + urllib.parse.quote(s, safe='') + ")"
+
+class Latex2PictureCommand(sublime_plugin.TextCommand):
+    """
+    Main logic
+    """
+    def run(self, edit):
+        view = self.view
+        for region in selections(view):
+            s = view.substr(region)
+            view.replace(edit, region, quote(view, s))
+```
+
+Feel free to add more function to that easy code!
