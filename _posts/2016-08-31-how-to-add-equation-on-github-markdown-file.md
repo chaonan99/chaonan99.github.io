@@ -35,7 +35,7 @@ There is no way for a programmer to do these foolish steps by hand! We always tr
 
 Here I wrote an easy sublime plug-in [here](https://github.com/chaonan99/Latex2Picture). It can do those steps above for you automatically just after pressing a hot key.
 
-```Python
+{% highlight Python %}
 import sublime, sublime_plugin, urllib
 
 def selections(view, default_to_all=True):
@@ -64,5 +64,6 @@ class Latex2PictureCommand(sublime_plugin.TextCommand):
             s = view.substr(region)
             view.replace(edit, region, quote(view, s))
 ```
+{% endhighlight %}
 
 Feel free to add more function to that easy code!
