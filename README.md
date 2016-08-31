@@ -5,7 +5,7 @@ This is my [personal blog](https://chaonan99.github.io/)! Topics on these posts 
 
 ## Requirement
 * [Ruby](https://www.ruby-lang.org/en/). Here is [Ruby installer for windows](http://rubyinstaller.org/).
-* [Jekyll](https://jekyllrb.com/docs/installation/). Note: command should be executed from ruby environment. Find the command tool under ruby install directory.
+* [Jekyll](https://jekyllrb.com/docs/installation/). Note: command should be executed from ruby environment. Find the command tool under ruby install directory (For windowns, it's `use_ruby.bat`).
 
 ## Run server
 

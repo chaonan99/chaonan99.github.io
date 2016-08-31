@@ -15,7 +15,7 @@ Sometimes we may need to write some equation in README file. This will be easy a
 1. Write equation in latex style, e.g. `\frac{\sigma}{\mu}`.
 2. In [this site](http://www.url-encode-decode.com/) (or either tool for url encoding-decoding), encode your formula. This encode your formula in `%` followed by two hexadecimal digits, e.g. `%5Cfrac%7B%5Csigma%7D%7B%5Cmu%7D` for the example in step one.
 
-![picture of url encoder site]()
+![picture of url encoder site](http://oa5omjl18.bkt.clouddn.com/2016_08_31_pasted_image_at_2016_08_31_01_54_pm.png "pasted_image_at_2016_08_31_01_54_pm")
 
 3. Prefixing the encoded formula by `http://latex.codecogs.com/svg.latex?`, e.g. `http://latex.codecogs.com/svg.latex?%5Cfrac%7B%5Csigma%7D%7B%5Cmu%7D`. This url will return a picture of the formula you want.
 4. You can add it as a picture in markdown like `![img](http://latex.codecogs.com/svg.latex?%5Cfrac%7B%5Csigma%7D%7B%5Cmu%7D)`.
