@@ -17,7 +17,7 @@ Sometimes we may need to write some equation in README file. This will be easy a
 
 ![picture of url encoder site](http://oa5omjl18.bkt.clouddn.com/2016_08_31_pasted_image_at_2016_08_31_01_54_pm.png "pasted_image_at_2016_08_31_01_54_pm")
 
-3. Prefixing the encoded formula by `http://latex.codecogs.com/svg.latex?`, e.g. `http://latex.codecogs.com/svg.latex?%5Cfrac%7B%5Csigma%7D%7B%5Cmu%7D`. This url will return a picture of the formula you want.
+3. Prefixing the encoded formula by `http://latex.codecogs.com/svg.latex?`, e.g. `http://latex.codecogs.com/svg.latex?%5Cfrac%7B%5Csigma%7D%7B%5Cmu%7D`. This url will return a picture of the formula you want. More information [here](http://latex.codecogs.com/eqneditor/integration/htmlequations.php).
 4. You can add it as a picture in markdown like `![img](http://latex.codecogs.com/svg.latex?%5Cfrac%7B%5Csigma%7D%7B%5Cmu%7D)`.
 
 # Reason
