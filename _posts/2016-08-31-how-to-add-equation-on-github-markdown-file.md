@@ -24,7 +24,7 @@ Sometimes we may need to write some equation in README file. This will be easy a
 
 * Why we need picture rather than direct latex?
 
-GitHub markdown parsing is performed by the SunDown (ex libUpSkirt) library. For security, it won't allow javascript to be executed when rendering markdown to HTML. Thus won't provide equation feature.
+GitHub markdown parsing is performed by the [SunDown](https://github.com/vmg/sundown) (ex libUpSkirt) library. For security, it won't allow javascript to be executed when rendering markdown to HTML. Thus won't provide equation feature.
 
 * Why encoding url?
 
