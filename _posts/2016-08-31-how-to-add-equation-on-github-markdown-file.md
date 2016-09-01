@@ -8,7 +8,7 @@ keywords: "GitHub, markdown, latex, camo, sublime, plug-in"
 
 > This blog post tells you how to show latex equation on GitHub (not GitHub Page, but .md file like README).
 
-Sometimes we may need to write some equation in README file. This will be easy as the markdown file is rendered to HTML (like on GitHub Page). But when we are viewing a README file directly in a repo, those latex style formulas (like $\sigma$) won't work (as is raised [here](http://stackoverflow.com/questions/11256433/how-to-show-math-equations-in-general-githubs-markdownnot-githubs-blog) and [here](https://github.com/STAT545-UBC/Discussion/issues/102)). Luckily, this is achievable through some external services, to request a image of formula through URL. You may just want a [solution](#solution), or know the [reason](#reason) behind it.
+Sometimes we may need to write some equation in README file. This will be easy as the markdown file is rendered to HTML (like on GitHub Page). But when we are viewing a README file directly in a repo, those latex style formulas (like $\sigma$) won't work (as is raised [here](http://stackoverflow.com/questions/11256433/how-to-show-math-equations-in-general-githubs-markdownnot-githubs-blog) and [here](https://github.com/STAT545-UBC/Discussion/issues/102)). Luckily, this is achievable through some external services, to request a image of formula through URL. You may just want a [solution](#solution), or know the [reason](#reason) behind it. Also a [Sublime plug-in](https://github.com/chaonan99/Latex2Picture) to do this on pressing a hotkey.
 
 # Solution
 
@@ -33,7 +33,7 @@ First of all, GitHub uses an open-source project called Camo to provide a proxy 
 # Sublime plug-in for this
 There is no way for a programmer to do these foolish steps by hand! We always try to solve these easy problem by raising a much more difficult problem... Anyway, here comes the sublime plug-in to do this job for us (I'm a heavy sublime user). If you know nothing about how to write a sublime plug-in, [here](https://clarknikdelpowell.com/blog/creating-sublime-text-3-plugins-part-1/) is a good start. Yet to implement a practicable plug-in is really difficult.
 
-Here I wrote an easy sublime plug-in [here](https://github.com/chaonan99/Latex2Picture). It can do those steps above for you automatically just after pressing a hot key.
+[Here](https://github.com/chaonan99/Latex2Picture) I wrote an easy sublime plug-in. It can do those steps above for you automatically just after pressing a hot key.
 
 {% highlight Python %}
 
