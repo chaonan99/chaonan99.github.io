@@ -31,7 +31,7 @@ GitHub markdown parsing is performed by the [SunDown](https://github.com/vmg/sun
 First of all, GitHub uses an open-source project called Camo to provide a proxy for images hosted on GitHub. You will see that once your file is uploaded, the [url of the image will change](https://help.github.com/articles/why-do-my-images-have-strange-urls/) to something like `https://camo.githubusercontent.com/672ecfd312696079a......`. But this mechanism only support encoded url and does not seem to support http redirect (which some service may fail to provide image, like [iText2Img](http://www.sciweavers.org/free-online-latex-equation-editor)).
 
 # Sublime plug-in for this
-There is no way for a programmer to do these foolish steps by hand! We always try to solve these easy problem by raising a much more difficult problem... Anyway, here comes the sublime plug-in to do this job for us (I'm a heavy sublime user). If you know nothing about how to write a sublime plug-in, [here](https://clarknikdelpowell.com/blog/creating-sublime-text-3-plugins-part-1/) is a good start. Yet to implement a practicable plug-in is really difficult.
+There is no way for a programmer to do these foolish steps by hand! We always try to solve an easy problem by raising a much more difficult problem... If you know nothing about how to write a sublime plug-in, [here](https://clarknikdelpowell.com/blog/creating-sublime-text-3-plugins-part-1/) is a good start. Yet to implement a practicable plug-in is really difficult.
 
 [Here](https://github.com/chaonan99/Latex2Picture) I wrote an easy sublime plug-in. It can do those steps above for you automatically just after pressing a hot key.
 
