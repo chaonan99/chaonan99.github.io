@@ -23,7 +23,7 @@ keywords: "markdown, typography blog, dummy content"
 $$\sin^2(x) + \cos^2(x) = 1$$
 </div>
 
-* Markdown难以转化为其他格式，尤其是PDF。这对于有写作业需求的我还是比较重要的。目前我用的解决方案是用[Rmarkdown](http://rmarkdown.rstudio.com/authoring_quick_tour.html)提供的工具。当然这个机制肯定是不依赖于R语言的，只是我懒得把它拆解出来能用就好 = =
+* Markdown难以转化为其他格式，尤其是PDF。一个稍微绕弯的做法就是先转成HTML然后打印出来。另外也可以用[Rmarkdown](http://rmarkdown.rstudio.com/authoring_quick_tour.html)提供的工具。当然这个机制肯定是不依赖于R语言的，只是我懒得把它拆解出来能用就好 = =
 
 # Future
 这个博客的中文字体还没设置（还不会耶），以及可能添加一些搜索，统计的功能。之后继续完善吧！以及开这个主页是为了给自己英文写作的锻炼机会，不知道咋回事就变成用中文了。
