@@ -2,6 +2,7 @@
 layout: post
 title: "How to Add Equation on Github Markdown File"
 comments: true
+date:   2016-08-31
 description: "This blog post tells you how to show latex equation on GitHub (not GitHub page, but .md file like README)."
 keywords: "GitHub, markdown, latex, camo, sublime, plug-in"
 ---

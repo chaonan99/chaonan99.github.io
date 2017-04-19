@@ -14,3 +14,7 @@ bundle exec jekyll serve
 ```
 
 There will be some error if I only run `jekyll serve` and I haven't figured out why.
+
+## Small tools
+* Site counter provided by [easy counter](http://www.easycounter.com/)
+* Comment provided by [Disqus](https://disqus.com/)

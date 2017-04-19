@@ -2,6 +2,7 @@
 layout: post
 title: "专业实践思想总结"
 comments: true
+date:   2016-09-08
 description: "This blog post is the thinking summary of my summer intern..."
 keywords: "GitHub, markdown, latex, camo, sublime, plug-in"
 ---

@@ -2,6 +2,7 @@
 layout: post
 title: "Here is How to Download/Use This Theme"
 comments: true
+date:   2016-06-10
 description: "Here is How to Download/Use This Theme"
 keywords: "dummy content"
 ---

@@ -2,6 +2,7 @@
 layout: post
 title: "Easy Explanation to Temporal Attention"
 comments: true
+date:   2016-08-11
 description: "This blog intends to explain the intuition of temporal attention mechanism and how to implement it."
 keywords: "temporal, attention, mechanism, implement, torch, tutorial"
 ---

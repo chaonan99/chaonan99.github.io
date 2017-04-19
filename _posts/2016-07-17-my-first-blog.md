@@ -2,6 +2,7 @@
 layout: post
 title: "我的第一篇"
 comments: true
+date:   2016-07-17
 description: "My first blog"
 keywords: "markdown, typography blog, dummy content"
 ---
