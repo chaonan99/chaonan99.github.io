@@ -5,13 +5,13 @@ permalink: /about/
 ---
 
 ### 陈昊楠 Haonan Chen
-* I'm currently an undergraduate in [Tsinghua University](http://www.tsinghua.edu.cn/publish/newthuen/).
-* I will join [UNC-CH](http://www.unc.edu/) CS PhD program in 2017 fall.
-* I'm interested in computer vision and machine learning.
-* I'm working as a research intern in [Megvii Inc.](https://megvii.com/).
-* I hobby is [sleeping](https://en.wikipedia.org/wiki/Sleep) and I spend most of my life doing that.
+* I'm currently PhD student in Computer Science Department in [University of North Carolina in Chapel Hill](http://www.unc.edu/).
+* I previously studied in [Department of Automation](http://www.tsinghua.edu.cn/publish/auen/) in [Tsinghua University](http://www.tsinghua.edu.cn/publish/newthuen/) and got my undergraduate degree there.
+* I'm interested in robotics, computer vision and machine learning.
+* I previously worked as a research intern in [Megvii Inc.](https://megvii.com/).
+* My hobby is [sleeping](https://en.wikipedia.org/wiki/Sleep) and I spend most of my life doing that.
 
 ### Contact
 * [Github](http://github.com/chaonan99)
-* [Email](mailto:chenhaonan1995@gmail.com)
+* [Personal email](mailto:chenhaonan1995@gmail.com)
 <!-- * Email: ![img](http://latex.codecogs.com/svg.latex?chenhaonan1995) at-mark ![img](http://latex.codecogs.com/svg.latex?gmail) dot-mark ![img](http://latex.codecogs.com/svg.latex?com) -->
