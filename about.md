@@ -5,7 +5,7 @@ permalink: /about/
 ---
 
 ### 陈昊楠 Haonan Chen
-* I'm currently PhD student in Computer Science Department in [University of North Carolina in Chapel Hill](http://www.unc.edu/).
+* I'm currently PhD student in Computer Science Department in [University of North Carolina at Chapel Hill](http://www.unc.edu/).
 * I previously studied in [Department of Automation](http://www.tsinghua.edu.cn/publish/auen/) in [Tsinghua University](http://www.tsinghua.edu.cn/publish/newthuen/) and got my undergraduate degree there.
 * I'm interested in robotics, computer vision and machine learning.
 * I previously worked as a research intern in [Megvii Inc.](https://megvii.com/).
