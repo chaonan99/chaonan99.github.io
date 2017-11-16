@@ -5,13 +5,15 @@ permalink: /about/
 ---
 
 ### 陈昊楠 Haonan Chen
-* I'm currently PhD student in Computer Science Department in [University of North Carolina at Chapel Hill](http://www.unc.edu/).
+* I'm currently PhD student in Computer Science Department in [University of North Carolina at Chapel Hill](http://www.unc.edu/). My advisor is [Ron Alterovitz](https://www.cs.unc.edu/~ron/).
 * I previously studied in [Department of Automation](http://www.tsinghua.edu.cn/publish/auen/) in [Tsinghua University](http://www.tsinghua.edu.cn/publish/newthuen/) and got my undergraduate degree there.
-* I'm interested in robotics, computer vision and machine learning.
+* I'm interested in [robotics](https://en.wikipedia.org/wiki/Robotics), [natural language processing](https://en.wikipedia.org/wiki/Natural_language_processing), computer vision and machine learning.
 * I previously worked as a research intern in [Megvii Inc.](https://megvii.com/).
+* I'm currently a [trombone](https://en.wikipedia.org/wiki/Trombone) player in [UNC Symphony Band](http://music.unc.edu/tag/symphony-band/). I've previously had a wonderful experience in [Tsinghua University Military Band](https://www.youtube.com/watch?v=NY8gHORo-3s&list=RDNY8gHORo-3s&t=18).
 * My hobby is [sleeping](https://en.wikipedia.org/wiki/Sleep) and I spend most of my life doing that.
 
 ### Contact
 * [Github](http://github.com/chaonan99)
 * [Personal email](mailto:chenhaonan1995@gmail.com)
+* [LinkedIn](https://www.linkedin.com/in/chaonan99/?locale=en_US)
 <!-- * Email: ![img](http://latex.codecogs.com/svg.latex?chenhaonan1995) at-mark ![img](http://latex.codecogs.com/svg.latex?gmail) dot-mark ![img](http://latex.codecogs.com/svg.latex?com) -->
