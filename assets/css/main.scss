@@ -6,6 +6,11 @@
 
 .center-image
 {
-    margin: 0 auto;
-    display: block;
+  margin: 0 auto;
+  display: block;
+}
+
+*, ::before, ::after
+{
+  box-sizing: content-box;
 }
