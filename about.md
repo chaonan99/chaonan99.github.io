@@ -5,7 +5,7 @@ permalink: /about/
 ---
 
 ### 陈昊楠 Haonan Chen
-* Always out-of-date [CV](assets/files/cv.pdf).
+* Always out-of-date [CV](assets/files/cv_haonanchen.pdf).
 * I'm currently PhD student in Computer Science Department in [University of North Carolina at Chapel Hill](http://www.unc.edu/). My advisor is [Ron Alterovitz](https://www.cs.unc.edu/~ron/).
 * I previously studied in [Department of Automation](http://www.tsinghua.edu.cn/publish/auen/) in [Tsinghua University](http://www.tsinghua.edu.cn/publish/newthuen/) and got my undergraduate degree there.
 * I'm interested in [robotics](https://en.wikipedia.org/wiki/Robotics), [natural language processing](https://en.wikipedia.org/wiki/Natural_language_processing), computer vision and machine learning.
