@@ -13,7 +13,7 @@ Some people like to consider [the relationship between neuroscience](https://www
 
 ## Background
 
-So we'll focus on how human brain understand language today. To get start, [this review paper](https://www.physiology.org/doi/abs/10.1152/physrev.00006.2011) by [Angela D. Friederici](http://www.cbs.mpg.de/employees/friederici) is a must-read. As it is a little long, here are some crucial backgrounds from the paper.
+So we'll focus on how human brain understand language today. To get start, the review paper [Friederici A. D. 2011](#ref_3) is a must-read. As it is a little long, here are something I found useful from the paper.
 
 **Language processing areas in the brain** (a [video](https://www.coursera.org/learn/human-language/lecture/eq4e0/aphasia) on this topic and aphasia)
 
@@ -61,6 +61,7 @@ Empirically, there are three basic methodological approaches to investigate synt
 * Introduce syntactic or semantic errors in sentences.
 * vary the complexity of the syntactic structure (including syntactic ambiguities) or the difficulty of semantic interpretation (including semantic ambiguities).
 
+
 To be continued ...
 
 ## References
@@ -71,5 +72,9 @@ To be continued ...
 
 <span style="font-size:0.9em">
 [<a name="ref_2">2</a>] Beres, Anna M. "<a href='https://link.springer.com/article/10.1007/s10484-017-9371-3'>Time is of the Essence: A Review of Electroencephalography (EEG) and Event-Related Brain Potentials (ERPs) in Language Research.</a>" Applied psychophysiology and biofeedback 42.4 (2017): 247-255.
+</span>
+
+<span style="font-size:0.9em">
+[<a name="ref_3">3</a>] Friederici, Angela D. "<a href="https://www.physiology.org/doi/abs/10.1152/physrev.00006.2011">The brain basis of language processing: from structure to function.</a>" Physiological reviews 91.4 (2011): 1357-1392.
 </span>
 
