@@ -61,8 +61,8 @@ Empirically, there are three basic methodological approaches to investigate synt
 * Introduce syntactic or semantic errors in sentences.
 * vary the complexity of the syntactic structure (including syntactic ambiguities) or the difficulty of semantic interpretation (including semantic ambiguities).
 
-
-To be continued ...
+### Beyond Lexical Semantics
+Researchers also investigated the integration of extralinguistic information into preceding context, such as pictures. Some study in pure visual domain. For instance, [West W. C. 2002](#ref_4) presented experiment where the participant see a series of pictures forming a story and the last one was either congruous or incongruous with preceding ones. The study shows that incongruous pictures elicited increased N300 and N400 effects. For semantic fit of pictures in a sentence context, ERP studies showed similar N400 amplitudes as that of words. The difference is that N300 is also observed, which is an earlier separate negativity (for more information, [Willems R. M. 2008](#ref_5) gives some summary).
 
 ## References
 
@@ -77,4 +77,13 @@ To be continued ...
 <span style="font-size:0.9em">
 [<a name="ref_3">3</a>] Friederici, Angela D. "<a href="https://www.physiology.org/doi/abs/10.1152/physrev.00006.2011">The brain basis of language processing: from structure to function.</a>" Physiological reviews 91.4 (2011): 1357-1392.
 </span>
+
+<span style="font-size:0.9em">
+[<a name="ref_4">4</a>] West, W. Caroline, and Phillip J. Holcomb. "<a href="https://www.sciencedirect.com/science/article/pii/S092664100100129X">Event-related potentials during discourse-level semantic integration of complex pictures.</a>" Cognitive Brain Research 13.3 (2002): 363-375.
+</span>
+
+<span style="font-size:0.9em">
+[<a name="ref_5">5</a>] Willems, Roel M., Aslı Özyürek, and Peter Hagoort. "<a href="https://www.mitpressjournals.org/doi/abs/10.1162/jocn.2008.20085">Seeing and hearing meaning: ERP and fMRI evidence of word versus picture integration into a sentence context.</a>" Journal of Cognitive Neuroscience 20.7 (2008): 1235-1249.
+</span>
+
 
