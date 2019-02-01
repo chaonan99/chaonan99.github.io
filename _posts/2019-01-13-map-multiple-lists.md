@@ -15,7 +15,7 @@ def multiple_list(a):
 
 unpack = lambda x: list(map(list, zip(*list(x))))
 test_list = [1, 2, 3]
-l1, l2, l3 = unpack(map(two_list, test_list))
+l1, l2, l3 = unpack(map(multiple_list, test_list))
 ```
 
 `l1`, `l2`, `l3` are `[1,2,3]`, `['1','2','3']` and `[2,3,4]` respectively.
