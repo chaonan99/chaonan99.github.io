@@ -6,7 +6,7 @@ permalink: /about/
 
 ### 陈昊楠 Haonan Chen
 
-<img src="../assets/images/author_3.jpeg" alt="My photo" max-width="50%" height="auto">
+<img src="../assets/images/author_3.jpeg" alt="My photo" max-width="20%" height="auto">
 
 * My [CV](../assets/files/cv_haonanchen.pdf).
 * I'm currently PhD student in Computer Science Department in [University of North Carolina at Chapel Hill](http://www.unc.edu/). My advisor is [Ron Alterovitz](https://www.cs.unc.edu/~ron/).
