@@ -14,6 +14,7 @@ permalink: /about/
 * I'm interested in [robotics](https://en.wikipedia.org/wiki/Robotics), [natural language processing](https://en.wikipedia.org/wiki/Natural_language_processing), computer vision and machine learning.
 * I previously worked as a research intern in [Megvii Inc.](https://megvii.com/).
 * I'm currently a [trombone](https://en.wikipedia.org/wiki/Trombone) player in [UNC Symphony Band](http://music.unc.edu/tag/symphony-band/). I've previously had a wonderful experience in [Tsinghua University Military Band](https://www.youtube.com/watch?v=NY8gHORo-3s&list=RDNY8gHORo-3s&t=18).
+* I'm born in a [pig year](https://en.wikipedia.org/wiki/Pig_%28zodiac%29) and 2019 is also a pig year.
 * My hobby is [sleeping](https://en.wikipedia.org/wiki/Sleep) and I spend most of my life doing that.
 
 ### Contact
