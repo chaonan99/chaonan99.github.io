@@ -49,6 +49,7 @@ og_locale: "zh_CN"
 gems:
   - bourbon
   - jekyll-paginate
+  - jekyll-sitemap
 
 # navbar pages
 navbar:
