@@ -7,8 +7,9 @@ permalink: /about/
 ### 陈昊楠 Haonan Chen
 
 * My [CV](../assets/files/cv_haonanchen.pdf).
-* I'm currently PhD student in Computer Science Department in [University of North Carolina at Chapel Hill](http://www.unc.edu/). My advisor is [Ron Alterovitz](https://www.cs.unc.edu/~ron/).
-* I previously studied in [Department of Automation](http://www.tsinghua.edu.cn/publish/auen/) in [Tsinghua University](http://www.tsinghua.edu.cn/publish/newthuen/) and got my undergraduate degree there.
+* I'm currently a research engineer at [TikTok Inc](https://www.tiktok.com/en/) doing research on generating music with AI and [making more people create music easily](https://apps.apple.com/us/app/ripple-music-creation-tool/id6447522624).
+* I was previously in Computer Science Department of [University of North Carolina at Chapel Hill](http://www.unc.edu/), advised by [Ron Alterovitz](https://www.cs.unc.edu/~ron/).
+* Before that I was in [Department of Automation](http://www.tsinghua.edu.cn/publish/auen/) of [Tsinghua University](http://www.tsinghua.edu.cn/publish/newthuen/).
 * I'm interested in [robotics](https://en.wikipedia.org/wiki/Robotics), [natural language processing](https://en.wikipedia.org/wiki/Natural_language_processing), computer vision and machine learning.
 * I previously worked as a research intern in [Megvii Inc.](https://megvii.com/).
 * I'm currently a [trombone](https://en.wikipedia.org/wiki/Trombone) player in [UNC Symphony Band](http://music.unc.edu/tag/symphony-band/). I've previously had a wonderful experience in [Tsinghua University Military Band](https://www.youtube.com/watch?v=NY8gHORo-3s&list=RDNY8gHORo-3s&t=18).
